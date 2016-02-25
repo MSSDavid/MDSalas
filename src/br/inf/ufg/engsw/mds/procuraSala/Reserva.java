@@ -10,6 +10,22 @@ import java.time.LocalDateTime;
 public class Reserva {
     private LocalDateTime inicio;
     private Sala sala; 
+
+    public LocalDateTime getInicio() {
+        return inicio;
+    }
+
+    public void setInicio(LocalDateTime inicio) {
+        this.inicio = inicio;
+    }
+
+    public Sala getSala() {
+        return sala;
+    }
+
+    public void setSala(Sala sala) {
+        this.sala = sala;
+    }
     
     
     public LocalDateTime data(LocalDateTime data, int year, int month, int day, 

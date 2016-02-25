@@ -33,20 +33,19 @@ public class CriarSala {
         scanner.nextLine();
                 
         flag = 0;
-         do { 
-        try {
-        System.out.println("Digite o número da sala:");
-        numero = Integer.parseInt(scanner.nextLine());    
-        flag = 0;
-        if (numero < 0) {
-        throw new Exception("Erroooo");
-        flag = 1;
-        }
-        }
-         catch (Exception error) {
-            System.out.println("Tipo de dado não suportado. Tente novamente.");
-            flag = 1;
-        }
+        do { 
+            try {
+                System.out.println("Digite o número da sala:");
+                numero = Integer.parseInt(scanner.nextLine());    
+                flag = 0;
+                if (numero < 0) {
+                    throw new Exception("Erroooo");
+                    flag = 1;
+                }
+            } catch (Exception error) {
+                System.out.println("Tipo de dado não suportado. Tente novamente.");
+                flag = 1;
+            }
         } while (flag == 1);           
         
         
@@ -54,38 +53,38 @@ public class CriarSala {
         // Trate um erro com carinho
         
         do { 
-        try {
-        System.out.println("Quantos alunos a sala suporta?");
-        capacidade = Integer.parseInt(scanner.nextLine());        
-        flag = 0;
-        if (capacidade < 0) {
-        throw new Exception("Tipo de dado não suportado. Tente novamente.");
-        flag = 1;
-        }
-        }
-         catch (Exception error) {
-            System.out.println("Tipo de dado não suportado. Tente novamente.");
-            flag = 1;
-        }
+            try {
+                System.out.println("Quantos alunos a sala suporta?");
+                capacidade = Integer.parseInt(scanner.nextLine());        
+                flag = 0;
+                if (capacidade < 0) {
+                    throw new Exception("Tipo de dado não suportado. Tente novamente.");
+                    flag = 1;
+                }
+            }
+             catch (Exception error) {
+                System.out.println("Tipo de dado não suportado. Tente novamente.");
+                flag = 1;
+            }
         } while (flag == 1);
         
         
         flag = 0;
          do { 
-        try {
-        System.out.println("Quantos computadores para uso do aluno tem na sala?"
-                + "");
-        computadores = Integer.parseInt(scanner.nextLine());    
-        flag = 0;
-        if (computadores < 0) {
-        throw new Exception("Tipo de dado não suportado. Tente novamente.");
-        flag = 1;
-        }
-        }
-         catch (Exception error) {
-            System.out.println("Dado incorreto! Repita a operação.");
-            flag = 1;
-        }
+            try {
+                System.out.println("Quantos computadores para uso do aluno tem na sala?"
+                        + "");
+                computadores = Integer.parseInt(scanner.nextLine());    
+                flag = 0;
+                if (computadores < 0) {
+                throw new Exception("Tipo de dado não suportado. Tente novamente.");
+                flag = 1;
+                }
+            }
+            catch (Exception error) {
+                System.out.println("Dado incorreto! Repita a operação.");
+                flag = 1;
+            }   
         } while (flag == 1);         
          
          
@@ -107,13 +106,12 @@ public class CriarSala {
     }    
     
         private static boolean isArcondicionado(Scanner scanner) {
-        System.out.println("Possui Arcondicionado? S/n");
-        String temArcondicionado = scanner.nextLine();
-        if(temArcondicionado.equalsIgnoreCase("S"))
-            return true;
-        else
-            return false;   
-        
+            System.out.println("Possui Arcondicionado? S/n");
+            String temArcondicionado = scanner.nextLine();
+            if(temArcondicionado.equalsIgnoreCase("S"))
+                return true;
+            else
+                return false;   
     }
     
     private static boolean isProjetor(Scanner scanner) {
