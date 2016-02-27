@@ -13,6 +13,7 @@ import br.inf.ufg.engsw.mds.procuraSala.CriarSala;
 /**
  *
  * @author Victor Stillo
+ * @Autor David testando github
  */
 public class ProcuraSala {
 
@@ -26,6 +27,7 @@ public class ProcuraSala {
         LocalDateTime data = LocalDateTime.now();
         int opcao = 0;
         do{
+            System.out.println("teste github");
             System.out.println("\n\nEscolha a opcao desejada:\n");
             System.out.println("1 - Criar Sala\n2 - Ver Lista de Salas\n"
                     + "3 - Reservar Sala\n4 - Ver Horários\n0 - Sair");
